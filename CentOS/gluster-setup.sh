@@ -42,11 +42,11 @@ main () {
   then
         exit 1
   fi
-  
+
   cp -r /etc/glusterfs_bkp/* /etc/glusterfs
   if [ $? -eq 1 ]
   then
-	echo "Failed to copy $DIR_1" 
+	echo "Failed to copy $DIR_1"
         exit 1
   fi
 
@@ -63,7 +63,9 @@ main () {
 	echo "Failed to copy $DIR_3"
 	exit 1
   fi
- 
+
   echo "Script Ran Successfully"
 }
 main
+
+glusterd --no-daemon
