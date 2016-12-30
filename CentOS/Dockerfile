@@ -43,6 +43,9 @@ RUN chmod 644 /etc/systemd/system/gluster-setup.service
 ADD gluster-setup.sh /usr/sbin/gluster-setup.sh
 RUN chmod 500 /usr/sbin/gluster-setup.sh
 
+ADD gluster-volume-setup.sh /usr/sbin/gluster-volume-setup.sh
+RUN chmod 500 /usr/sbin/gluster-volume-setup.sh
+
 RUN echo 'root:password' | chpasswd
 VOLUME [ “/sys/fs/cgroup” ]
 
