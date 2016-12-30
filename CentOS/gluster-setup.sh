@@ -67,5 +67,3 @@ main () {
   echo "Script Ran Successfully"
 }
 main
-
-glusterd --no-daemon
